@@ -12,6 +12,8 @@ namespace MyClasses
                 throw new ArgumentNullException();
             }
 
+            System.Diagnostics.Debug.WriteLine(fileName);
+
             return File.Exists(fileName);
         }
     }
