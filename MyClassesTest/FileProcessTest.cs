@@ -64,22 +64,20 @@ namespace MyClassesTest
         public TestContext TestContext { get; set; }
 
         [TestMethod]
+        [Owner("Matt Fricker")]
         public void FileNameDoesExist()
         {
             FileProcess fp = new FileProcess();
             bool fromCall;
 
-            //TestContext.WriteLine("Creating the file");
-            //File.AppendAllText(_GoodFileName, "Some text");
             TestContext.WriteLine("Checking the file");
             fromCall = fp.FileExists(_GoodFileName);
-            //TestContext.WriteLine("Deleting the file");
-            //File.Delete(_GoodFileName);
 
             Assert.IsTrue(fromCall);
         }
 
         [TestMethod]
+        [Owner("Matt Fricker")]
         public void FileNameDoesNotExist()
         {
             FileProcess fp = new FileProcess();
@@ -101,6 +99,7 @@ namespace MyClassesTest
         }
 
         [TestMethod]
+        [Owner("Matt Fricker")]
         [ExpectedException(typeof(ArgumentNullException))]
         public void FileNameNullOrEmpty_ThrowsArgumentNullException()
         {
@@ -109,6 +108,7 @@ namespace MyClassesTest
         }
 
         [TestMethod]
+        [Owner("Matt Fricker")]
         public void FileNameNullOrEmpty_ThrowsArgumentNullException_UsingTryCatch()
         {
             FileProcess fp = new FileProcess();
