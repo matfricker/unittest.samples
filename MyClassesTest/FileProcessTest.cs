@@ -118,6 +118,8 @@ namespace MyClassesTest
         [Timeout(3000)]
         public void SimulateTimeout()
         {
+            TestContext.WriteLine("Test");
+
             System.Threading.Thread.Sleep(4000);
         }
 
