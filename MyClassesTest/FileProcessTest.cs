@@ -100,7 +100,7 @@ namespace MyClassesTest
         [TestMethod]
         [Owner("Matt Fricker")]
         [DeploymentItem(FILE_NAME)]
-        public void FileNamDoesExistUsingDeploymentItem()
+        public void FileNameDoesExistUsingDeploymentItem()
         {
             FileProcess fp = new FileProcess();
             string fileName;
@@ -112,13 +112,6 @@ namespace MyClassesTest
             fromCall = fp.FileExists(fileName);
 
             Assert.IsTrue(fromCall);
-        }
-
-        [TestMethod]
-        [Timeout(3000)]
-        public void SimulateTimeout()
-        {
-            System.Threading.Thread.Sleep(4000);
         }
 
         [TestMethod]
