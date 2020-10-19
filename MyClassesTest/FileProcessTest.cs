@@ -115,6 +115,15 @@ namespace MyClassesTest
         }
 
         [TestMethod]
+        [Timeout(3000)]
+        public void SimulateTimeout()
+        {
+            TestContext.WriteLine("Test");
+
+            System.Threading.Thread.Sleep(4000);
+        }
+
+        [TestMethod]
         [Priority(1)]
         [TestCategory("Exception")]
         [Owner("Matt Fricker")]
